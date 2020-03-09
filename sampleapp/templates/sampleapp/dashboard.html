@@ -1,0 +1,58 @@
+{% extends "sampleapp/base.html" %}
+
+{% block title %}
+	Dashboard
+{% endblock %}
+
+{% block content %}
+	<section class="section-padding gray-bg" id="contact-area">
+		<div class="container">
+			
+
+		
+
+				<div class="row">
+				    <div class="col-xs-12">
+				        <div class="page-title">
+				            <h3 class="bar-title">All Enquiries</h3>
+				        </div>
+				    </div>
+				</div>
+				<hr />
+				{% for enquiry in enquiry %}
+					<div class="container">
+
+						<div class="row">
+							<div class="col-xs-12 img img-rounded" style="background-color: white; color: blue;">
+								<div class="col-xs-3 box-icon">
+								    <i class="icofont icofont-idea">{{ enquiry.pub_date }}</i>
+								</div>
+								<div class="col-xs-4">
+								
+									<p>{{ enquiry.enquirer }}<br/><a href="">{{ enquiry.enquirer.email }}</a></p>
+								</div>
+								<div class="col-xs-3">
+									<div class="col-xs-1">
+										<p></p>
+									</div>
+									<div class="col-xs-2">
+										<p></p>
+									<a class="btn btn-success" href="{% url 'sampleapp:detail' enquiry.id %}" ">view</a>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<br />
+					</div>					
+				{% endfor %}
+				<hr />
+
+
+		</div>
+	</section>
+
+<p><a href="{% url 'logout' %}">logout</a></p>
+
+{% endblock %}
+

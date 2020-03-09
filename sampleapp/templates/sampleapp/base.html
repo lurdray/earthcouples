@@ -1,0 +1,107 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>{% block title %}{% endblock %}</title>
+    <!-- Place favicon.ico in the root directory  {% static 'samppleapp/' %} -->
+    <link rel="apple-touch-icon" href="{% static 'sampleapp/images/apple-touch-icon.png' %}">
+    <link rel="shortcut icon" type="image/ico" href="{% static 'sampleapp/images/favicon.ico' %}" />
+    <!-- Plugin-CSS -->
+    <link rel="stylesheet" href="{% static 'sampleapp/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'sampleapp/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'sampleapp/css/icofont.css' %}">
+    <link rel="stylesheet" href="{% static 'sampleapp/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'sampleapp/css/animate.css' %}">
+    <!-- Main-Stylesheets -->
+    <link rel="stylesheet" href="{% static 'sampleapp/css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'sampleapp/style.css' %}">
+    <link rel="stylesheet" href="{% static 'sampleapp/css/responsive.css' %}">
+    <script src="{% static 'sampleapp/js/vendor/modernizr-2.8.3.min.js' %}"></script>
+
+</head>
+<body class="site2" data-spy="scroll" data-target=".mainmenu-area">
+    <!-- Mainmenu-Area -->
+    <nav class="navbar mainmenu-area" data-spy="affix" data-offset-top="197">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="navbar-header smoth">
+                        <a class="navbar-brand" href="{% url 'sampleapp:index' %}">.</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+	{% block content %}
+	{% endblock %}
+
+
+
+
+
+
+
+    <footer class="footer-area" style="background-color: grey; color: white;">
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <p class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | EARTHCOUPLES</p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Vendor-JS-->
+    <script src="{% static 'samppleapp/js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'samppleapp/js/vendor/bootstrap.min.js' %}"></script>
+    <!--Plugin-JS-->
+    <script src="{% static 'samppleapp/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'samppleapp/js/appear.js' %}"></script>
+    <script src="{% static 'samppleapp/js/bars.js' %}"></script>
+    <script src="{% static 'samppleapp/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'samppleapp/js/counterup.min.js' %}"></script>
+    <script src="{% static 'samppleapp/js/easypiechart.min.js' %}"></script>
+    <script src="{% static 'samppleapp/js/mixitup.min.js' %}"></script>
+    <script src="{% static 'samppleapp/js/contact-form.js' %}"></script>
+    <script src="{% static 'samppleapp/js/scrollUp.min.js' %}"></script>
+    <script src="{% static 'samppleapp/js/magnific-popup.min.js' %}"></script>
+    <script src="{% static 'samppleapp/js/wow.min.js' %}"></script>
+    <!--Main-active-JS-->
+    <script src="{% static 'samppleapp/js/main.js' %}"></script>
+    <script src="{% static 'samppleapp/js/maps.js' %}"></script>
+
+</body>
+
+
+</html>
+

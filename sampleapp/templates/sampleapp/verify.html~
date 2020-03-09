@@ -1,0 +1,55 @@
+{% extends "sampleapp/base.html" %}
+
+{% block title %}
+	Verify
+{% endblock %}
+
+{% block content %}
+
+<section class="section-padding" id="contact-area">
+        <div class="container">
+            <div class="container jumbotron">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="page-title">
+                            <h3 class="bar-title">Success!</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row contact-form feature-box wow fadeInUp">
+                
+                	
+                	<div class="row">
+                		<h3>Yes!, {{ couple.hus_name }} and {{ couple.wife_name }}</h3>
+                	</div>
+                  
+                    
+					<div class="row">
+						<b class="text-success">Are officially married on this platform!</b>
+					</div>		
+					
+					<br />
+					<br />
+					<br />
+					<div class="row">
+						<p>Details</p>
+                		<ul>
+                			<li>Union id: {{ couple.id }}</li>
+                			<li>Email: {{ couple.email }}</li>
+                			<li>Phone: {{ couple.phone }}</li>
+                			<li>Comment: {{ couple.comment }}</li>
+                		</ul>
+                	</div>
+
+
+                </div>
+		<br />
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}

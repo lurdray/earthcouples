@@ -1,0 +1,64 @@
+
+
+{% extends "registration/base.html" %}
+
+{% block title %}
+	Login
+{% endblock %}
+
+{% block content %}
+	<section class="section-padding" id="contact-area">
+        <div class="container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="page-title">
+                            <h3 class="bar-title">Login</h3>
+                        </div>
+                    </div>
+                </div>
+
+		<div class="row container feature-box wow fadeInUp">
+			
+                    <div class="col-sm-8">
+                        <div class="contact-form">
+                            <form method="post">
+				{% csrf_token %}
+                                <div class="form-group">
+                                   {{ form.as_p }}
+                                </div>
+                                <button type="submit" class="bttn bttn-primary">login</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+		
+
+		</div>
+	</div>
+	</section>
+
+
+
+{% endblock %}
+
+<h2>Login</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Login</button>
+</form>
+
+ <input type="text" id="form-name" name="name" placeholder="Username">
+
+<div class="form-group">
+                                    <input type="password" name="email" id="form-email" placeholder="password">
+                                </div>
+
+col-sm-offset-3
+

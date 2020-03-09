@@ -1,0 +1,129 @@
+{% extends "sampleapp/base.html" %}
+{% load staticfiles %}
+ 
+
+{% block title %}
+	Home Page
+{% endblock %}
+
+{% block content %}
+
+<header class="header-area overlay" id="home-area" style="height:80%; background-image:url({% static 'sampleapp/images/mybg.jpg' %});">
+        <div class="vcenter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 text-center">
+                        <div class="header-text">
+                            <div class="wow fadeInUp upper latter-space" data-wow-delay="0.2s">A DECENTRALIZED WAY OF DESIGNATING UNIONS</div>
+                            <h6 class="header-title wow fadeInUp upper" data-wow-delay="0.4s">EarthCouples<span class="dot"></span></h6>
+                            <h1 style="color:white;">Give your Marriage a Digital instance today!</h1>
+				 <div class="smoth">
+            <a href="#about-area" class="scrolldown"><i class="icofont icofont-bubble-down"></i></a>
+        </div>
+                            <div class="wow fadeInUp" data-wow-delay="0.7s">
+                                <a href="{% url 'sampleapp:enquire' %}" class="bttn bttn-lg bttn-primary">Get Started!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+	<hr/>
+	<section class="section-padding" id="service-area">
+        <div class="container">
+
+		<div class="row">
+                    <div class="col-xs-12">
+                        <div class="page-title">
+                            <h3 class="bar-title">Features</h3>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="feature-box wow fadeInUp" data-wow-delay="0.2s">
+			<div class="row">
+				<img class="img img-rounded" src="static/sampleapp/images/wed.jpg" />
+			</div>
+                        <div class="box-icon">
+                            <i class="icofont icofont-idea"></i>
+                        </div>
+                        <h4>Beginning</h4>
+                        <p>Start your marriage journey with us.</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+			
+                    <div class="feature-box wow fadeInUp" data-wow-delay="0.4s">
+			<div class="row">
+				<img class="img img-rounded" src="static/sampleapp/images/ppp.jpg" />
+			</div>
+                        <div class="box-icon">
+                            <i class="icofont icofont-code-alt"></i>
+                        </div>
+                        <h4>Happy with cloud</h4>
+                        <p>Remain happy with having your marriage certification in the cloud.</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="feature-box wow fadeInUp" data-wow-delay="0.6s">
+			<div class="row">
+				<img class="img img-rounded" src="static/sampleapp/images/man.jpg" />
+			</div>
+                        <div class="box-icon">
+                            <i class="icofont icofont-monitor"></i>
+                        </div>
+                        <h4>Time</h4>
+                        <p>And when you get old, your record remains young.</p>
+                    </div>
+                </div>
+            </div>
+
+		
+    </section>
+    
+    
+<section class="section-padding jumbotron lead" id="service-area" style="height:40%; background-color:teal; color: white;">
+        <div class="container">
+			<div class="row">
+                    <div class="col-xs-12">
+                        <div class="text-center">
+                            <p class="lead"><h2 style="color:white;">EARTHCOUPLES</h2> A web platform which offer couples a digitalized instance of thier marriage certification.<a href="{% url 'sampleapp:enquire' %}" class="btn btn-default">Get Started!</a></p>
+                        </div>
+                    </div>
+                </div>
+      		 </div>
+     	</div>
+</section>
+
+	
+<section class="section-padding jumbotron" id="service-area" style="height:50%; background-image:url({% static 'sampleapp/images/mybg.jpg' %});">
+        <div class="container">
+
+		<div class="row">
+			<div class="jumbotron">
+				<h2>Review your status</h2>
+			</div>
+     	</div>
+     	<div class="row" >
+     		<div class="contact-form feature-box wow fadeInUp">
+                            <form action="{% url 'sampleapp:verify' %}" id="contact-form" method="post">
+				{% csrf_token %}
+                                <div class="form-double">
+                                    <input type="text" id="form-name" name="union_id" placeholder="Input union id">
+                                </div>
+                                <button class="bttn bttn-primary">Verify!</button>
+                            </form>
+                        </div>
+     	</div>
+     </div>
+</section>	
+
+
+
+{% endblock %}
+

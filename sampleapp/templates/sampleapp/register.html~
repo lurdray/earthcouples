@@ -1,0 +1,59 @@
+{% extends "sampleapp/base.html" %}
+
+{% block title %}
+	Register
+{% endblock %}
+
+{% block content %}
+
+<section class="section-padding" id="contact-area">
+        <div class="container">
+            <div class="container jumbotron">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="page-title">
+                            <h3 class="bar-title">Register</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="contact-form feature-box wow fadeInUp">
+                            <form action="{% url 'sampleapp:enquire' %}" id="contact-form" method="post">
+				{% csrf_token %}
+                                <div class="form-double">
+                                    <input type="text" id="form-name" name="name1" placeholder="Husband's name:">
+                                    <input type="text" name="name2" placeholder="Wife's name:">
+                                </div>
+                                <div class="form-double">
+                                    <input type="email" name="email" name="email" id="form-email" placeholder="Email">
+                                    <input type="text" name="phone" id="form-subject" placeholder="Phone">
+                                </div>
+                                <textarea name="comment" id="message" id="form-message" rows="5" required="required" placeholder="What do you have to say about this union? e.g: i love my partner than living itself"></textarea>
+                                <button class="bttn bttn-primary">Submit!</button>
+                            </form>
+                        </div>
+                    </div>
+			<div class="col-md-4">
+				<jimg class="img img-rounded" src="static/sampleapp/images/blog-md-2.jpg" />
+			</div>		
+
+
+                </div>
+		<br />
+		<div class="row">
+                    <div class="col-xs-12">
+                        <div class="">
+                            <h4 class="bar-title">please note</h4><h6 style="color: red;">Your sensitive details are safe with EarthCouples.<br/>Your email and phone number isnt shared outside our system. </h6>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+{% endblock %}
